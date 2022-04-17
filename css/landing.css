@@ -211,50 +211,6 @@ a .bubbles {
   }
 }
 
-@-webkit-keyframes introLoad {
-  from {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-  to {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-
-@keyframes introLoad {
-  from {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-  to {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-
-@-webkit-keyframes moveArrow {
-  from {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes moveArrow {
-  from {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
 @-webkit-keyframes moveDown {
   from {
     -webkit-transform: translateY(-100px);

@@ -3,12 +3,14 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
+
+
 body {
     margin: 1.5em;
     background-color: #06121d;
     color: #f2fbfb;
-    font-family: 'Poppins', sans-serif;
 }
 
 .highlight {
@@ -20,6 +22,22 @@ a {
     text-decoration: none;
     font-size: 1.3rem;
 }
+
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0.5em 1em 0.5em 1em;
+    z-index: 3;
+    background: #06121d;
+    height: 6%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 
 .logo {
     color:#f2fbfb;
@@ -50,6 +68,7 @@ nav {
             color: #f2fbfb;
             padding: 0.75em 2em;
             display: block;
+            font-size: 1rem;
 
             &:hover {
                 background: #e39b28;
@@ -61,17 +80,26 @@ nav {
         float: right;
         margin: 2em;
         width: 2em;
-    }
+        &:hover {
+            background: #e39b28;
+            border-radius: 0.5em;
+        }
+    }    
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    
 
     svg {
         width: 2.3em;
-        margin-top: -0.6em;
+        margin-top: 0em;
         cursor: pointer;
+        &:hover {
+            background: #e39b28;
+            border-radius: 0.5em;
+        }
     }
 }
 
@@ -188,6 +216,8 @@ header {
     padding: 1em;
     border-radius: 1em;
     margin-bottom: 0.5em;
+    cursor: pointer;
+    border: none;
         &:hover {
             color: #f2fbfb;
             background: #e39b28;
@@ -266,11 +296,17 @@ header {
 .figma_logo, .XD_logo {
     align-items: center;
     text-align: center;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+        transition: 0.8s;
+    }
 }
 
 .HTML_logo-svg, .CSS_logo-svg, .JS_logo-svg,
 .figma_logo-svg, .XD_logo-svg {
-    width: 120px;
+    width: 26vw;
+    margin: 0 0.2em 0 0.2em;
 }
 
 //=================Certification==================//
@@ -296,7 +332,7 @@ header {
 .google_certification-png, .JHU_certification-png, .ICDL_certification-png {
     padding-top: 1em;
     width: 85%;
-    height: 280px;
+    height: 180px;
 }
 
 .certification_JHU-head, .certification_ICDL-head {
@@ -314,29 +350,202 @@ header {
 
 
 
-.gcfi_app-title, .gcfi_web-title {
+
+.gcfi_app-title, .gcfi_web-title, .pia_app-title {
     text-align: center;
-    padding: 0 0 1em 0;
+    margin: 1em 0 1em 0;
     color: #e39b28;
 }
 
-.gcfi_app-prototype, .gcfi_web-prototype {
-    width: 100%;
-    height: 80vh;
+
+
+.gcfi_app-prototype {
+    img {
+        display: block;
+        margin: auto;
+        width: 50%;
+        height: 300px;
+    }
+    p {
+        text-align: center;
+        margin: 1em 0 1em 0;
+        color: #e39b28;
+        font-weight: bold;
+        font-size: 1rem;
+        text-decoration: underline;
+    }
 }
 
-.gcfi_app-description, .gcfi_web-description {
+.gcfi_web-prototype {
+    img {
+        display: block;
+        margin: auto;
+        width: 80%;
+        height: 300px;
+
+    }
+    p {
+        text-align: center;
+        margin: 1em 0 1em 0;
+        color: #e39b28;
+        font-weight: bold;
+        font-size: 1rem;
+        text-decoration: underline;
+    }
+}
+
+.pia_app-prototype {
+    img {
+        display: block;
+        margin: auto;
+        width: 50%;
+        height: 300px;
+    }
+    p {
+        text-align: center;
+        margin: 1em 0 1em 0;
+        color: #e39b28;
+        font-weight: bold;
+        font-size: 1rem;
+        text-decoration: underline;
+    }
+}
+
+
+.gcfi_app-description, .gcfi_web-description, 
+.pia_web-description {
     text-align: center;
     font-size: 0.8rem;
     margin-bottom: 0.5em;
 }
 
 
+//=================Contact==================//
+
+.contact_container {
+    row-gap: 3em;
+}
+
+.contact_information {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.contact_icon {
+    font-size: 2rem;
+    color: #f2fbfb;
+    margin-right: 1em;
+}
+
+.contact_title {
+    font-size: 1.2rem;
+    color: #e39b28;
+}
+
+.contact_subtitle {
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.contact_content {
+    background: #e39b28;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin: 1em 0 1em 0;
+}
+
+.contact_input {
+    width: 100%;
+    background: #f2fbfb;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    padding: 0.25em 0.5em 0.5em 0;
+  
+}
+
+.contact_label {
+    font-size: 1rem;
+    color: #f2fbfb;
+}
 
 
 
+@media only screen and (min-width: 340px) {
 
 
+    .HTML_logo-svg, .CSS_logo-svg, .JS_logo-svg,
+    .figma_logo-svg, .XD_logo-svg {
+        width: 20vw;
+        margin: 0 0.2em 0 0.2em;
+    }   
+
+    .google_certification-png, .JHU_certification-png, .ICDL_certification-png {
+        padding-top: 1em;
+        width: 85%;
+        height: 220px;
+    }
+
+
+}
+
+@media only screen and (min-width: 460px) {
+
+    nav ul a {
+        font-size: 1.3rem;
+    }
+
+    .HTML_logo-svg, .CSS_logo-svg, .JS_logo-svg,
+    .figma_logo-svg, .XD_logo-svg {
+        width: 20vw;
+        margin: 0 0.2em 0 0.2em;
+    }   
+
+    .google_certification-png, .JHU_certification-png, .ICDL_certification-png {
+        padding-top: 1em;
+        width: 85%;
+        height: 270px;
+    }
+    .gcfi_app-prototype {
+        img {
+            display: block;
+            margin: auto;
+            width: 50%;
+            height: 340px;
+        }
+        p {
+            text-align: center;
+            margin: 1em 0 1em 0;
+        }
+    }
+    
+    .gcfi_web-prototype {
+        img {
+            display: block;
+            margin: auto;
+            width: 65%;
+            height: 340px;
+    
+        }
+        p {
+            text-align: center;
+            margin: 1em 0 1em 0;
+        }
+    }
+    
+    .pia_app-prototype {
+        img {
+            display: block;
+            margin: auto;
+            width: 50%;
+            height: 340px;
+        }
+        p {
+            text-align: center;
+            margin: 1em 0 1em 0;
+        }
+    }
+}
 
 
 @media only screen and (min-width: 680px) {
@@ -344,6 +553,78 @@ header {
     body {
         margin: 1.5em 5em;
     }
+
+    .home_blob {
+        width: 260px;
+        fill: #e39b28;
+            img {
+                width: 260px;
+            }
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.5s;
+            }
+    }
+
+    .about_img {
+        display: block;
+        width: 260px;
+        border-radius: 0.5em;
+        margin: 0 auto 0.5em auto;
+    }
+
+
+    .HTML_logo-svg, .CSS_logo-svg, .JS_logo-svg,
+    .figma_logo-svg, .XD_logo-svg {
+        width: 20vw;
+        margin: 0 0.2em 0 0.2em;
+    }   
+
+    .google_certification-png, .JHU_certification-png, .ICDL_certification-png {
+        padding-top: 1em;
+        width: 85%;
+        height: 360px;
+    }
+
+    .gcfi_app-prototype {
+        img {
+            display: block;
+            margin: auto;
+            width: 50%;
+            height: 420px;
+        }
+        p {
+            text-align: center;
+            margin: 1em 0 1em 0;
+        }
+    }
+    .gcfi_web-prototype {
+        img {
+            display: block;
+            margin: auto;
+            width: 65%;
+            height: 440px;
+    
+        }
+        p {
+            text-align: center;
+            margin: 1em 0 1em 0;
+        }
+    }
+    
+    .pia_app-prototype {
+        img {
+            display: block;
+            margin: auto;
+            width: 50%;
+            height: 420px;
+        }
+        p {
+            text-align: center;
+            margin: 1em 0 1em 0;
+        }
+    }
+
 }
 
 @media only screen and (min-width: 920px) {
@@ -378,35 +659,178 @@ header {
             }
         }
     }
+
+
+    .home_blob {
+        width: 300px;
+        fill: #e39b28;
+            img {
+                width: 260px;
+            }
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.5s;
+            }
+    }
+
+    .about_img {
+        display: block;
+        width: 300px;
+        border-radius: 0.5em;
+        margin: 0 auto 0.5em auto;
+    }
+
+
+    .HTML_logo-svg, .CSS_logo-svg, .JS_logo-svg,
+    .figma_logo-svg, .XD_logo-svg {
+        width: 16vw;
+        margin: 0 0.2em 0 0.2em;
+    }
+
+
+    .google_certification-png, .JHU_certification-png, .ICDL_certification-png {
+        padding-top: 1em;
+        width: 75%;
+        height: 450px;
+    }
+
+    .gcfi_app-prototype {
+        img {
+            display: block;
+            margin: auto;
+            width: 55%;
+            height: 700px;
+        }
+        p {
+            text-align: center;
+            margin: 1em 0 1em 0;
+            color: #e39b28;
+            font-weight: bolder;
+        }
+    }
+    .gcfi_web-prototype {
+        img {
+            display: block;
+            margin: auto;
+            width: 70%;
+            height: 700px;
+    
+        }
+        p {
+            text-align: center;
+            margin: 1em 0 1em 0;
+        }
+    }
+    
+    .pia_app-prototype {
+        img {
+            display: block;
+            margin: auto;
+            width: 55%;
+            height: 700px;
+        }
+        p {
+            text-align: center;
+            margin: 1em 0 1em 0;
+        }
+    }
+
+
+    .contact_form {
+        width: 80%;
+    }
+
 }
     
 
 
+
+
+
 @media only screen and (min-width: 1200px) {
 
+    .google_certification-png, .JHU_certification-png, .ICDL_certification-png {
+        padding-top: 1em;
+        width: 55%;
+        height: 420px;
+    }
 
+    .gcfi_app-prototype {
+        img {
+            display: block;
+            margin: auto;
+            width: 30%;
+            height: 500px;
+        }
+        p {
+            text-align: center;
+            margin: 1em 0 1em 0;
+        }
+    }
+    .gcfi_web-prototype {
+        img {
+            display: block;
+            margin: auto;
+            width: 40%;
+            height: 500px;
+    
+        }
+        p {
+            text-align: center;
+            margin: 1em 0 1em 0;
+        }
+    }
+    
+    .pia_app-prototype {
+        img {
+            display: block;
+            margin: auto;
+            width: 30%;
+            height: 500px;
+        }
+        p {
+            text-align: center;
+            margin: 1em 0 1em 0;
+        }
+    }
+
+    .contact_form {
+        width: 70%;
+    }
 
 
 
 }
 
-@keyframes introLoad {
-    from {
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-    to {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
+
+//------animation home-------//
+
+#home {
+    animation: moveDown 1s ease-in-out forwards;
+    opacity: 0;
+}
+#about {
+    animation: moveDown 1.2s ease-in-out forwards;
+    opacity: 0;
+}
+#skills {
+    animation: moveDown 1.4s ease-in-out forwards;
+    opacity: 0; 
+}
+#certification {
+    animation: moveDown 1.6s ease-in-out forwards;
+    opacity: 0;
+}
+#work {
+    animation: moveDown 1.8s ease-in-out forwards;
+    opacity: 0; 
+}
+#contact {
+    animation: moveDown 2.0s ease-in-out forwards;
+    opacity: 0;
 }
 
-@keyframes moveArrow {
-    from {
-        transform: translateY(-30px);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
+
 
 @keyframes moveDown {
     from {
